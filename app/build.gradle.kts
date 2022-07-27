@@ -9,6 +9,11 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+
+    id("org.springframework.boot") version "2.7.2"
+    id("io.spring.dependency-management") version "1.0.12.RELEASE"
+    kotlin("jvm") version "1.6.21"
+    kotlin("plugin.spring") version "1.6.21"
 }
 
 repositories {
@@ -17,11 +22,18 @@ repositories {
 }
 
 dependencies {
-    // Use JUnit Jupiter for testing.
-    testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
 
-    // This dependency is used by the application.
-    implementation("com.google.guava:guava:31.0.1-jre")
+    implementation("org.springframework.boot:spring-boot-starter-mail")
+
+    implementation("org.springframework.boot:spring-boot-starter-web")
+
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
 application {
