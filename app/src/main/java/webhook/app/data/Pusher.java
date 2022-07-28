@@ -2,30 +2,25 @@ package webhook.app.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Pusher
-{
+public class Pusher {
 	String email;
 	String name;
 
 	@JsonProperty ("email")
-	public String getEmail ()
-	{
+	public String getEmail () {
 		return this.email;
 	}
 
-	public void setEmail (String email)
-	{
+	public void setEmail (String email) {
 		this.email = email;
 	}
 
 	@JsonProperty ("name")
-	public String getName ()
-	{
+	public String getName () {
 		return this.name;
 	}
 
-	public void setName (String name)
-	{
+	public void setName (String name) {
 		this.name = name;
 	}
 }

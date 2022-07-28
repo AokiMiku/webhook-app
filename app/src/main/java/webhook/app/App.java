@@ -10,19 +10,18 @@ import java.awt.*;
 
 @SpringBootApplication
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+	public static void main (String[] args) {
+		System.out.println (new App ().getGreeting ());
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+		var ctx = new SpringApplicationBuilder (App.class).headless (false).run (args);
 
-		var ctx = new SpringApplicationBuilder (App.class)
-				.headless(false).run(args);
+		EventQueue.invokeLater (() -> {
 
-		EventQueue.invokeLater(() -> {
-
-			var ex = ctx.getBean(App.class);
+			var ex = ctx.getBean (App.class);
 		});
-    }
+	}
+
+	public String getGreeting () {
+		return "Hello World!";
+	}
 }
