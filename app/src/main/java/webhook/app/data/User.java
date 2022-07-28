@@ -2,9 +2,7 @@ package webhook.app.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Owner {
-	String email;
-	String name;
+public class User {
 	String login;
 	int id;
 	String node_id;
@@ -23,24 +21,6 @@ public class Owner {
 	String received_events_url;
 	String type;
 	boolean site_admin;
-
-	@JsonProperty ("email")
-	public String getEmail () {
-		return this.email;
-	}
-
-	public void setEmail (String email) {
-		this.email = email;
-	}
-
-	@JsonProperty ("name")
-	public String getName () {
-		return this.name;
-	}
-
-	public void setName (String name) {
-		this.name = name;
-	}
 
 	@JsonProperty ("login")
 	public String getLogin () {
