@@ -25,6 +25,9 @@ dependencies {
 
     implementation("org.springframework.boot:spring-boot-starter-mail")
 
+    // https://mvnrepository.com/artifact/org.springframework/spring-context-support
+    implementation("org.springframework:spring-context-support:5.3.22")
+
     implementation("org.springframework.boot:spring-boot-starter-web")
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
