@@ -10,7 +10,7 @@ import java.util.ArrayList;
 @RestController
 public class Payload {
 
-	public ArrayList<PayloadVO> payloads;
+	public ArrayList<PayloadVO> payloads = new ArrayList<> ();
 
 	@PostMapping (path = "/payload")
 	public void retrievePayload (@RequestBody PayloadVO payloadVO) {
