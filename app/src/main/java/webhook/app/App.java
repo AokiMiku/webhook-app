@@ -3,6 +3,12 @@
  */
 package webhook.app;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+
+import java.awt.*;
+
+@SpringBootApplication
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -10,5 +16,13 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+
+		var ctx = new SpringApplicationBuilder (App.class)
+				.headless(false).run(args);
+
+		EventQueue.invokeLater(() -> {
+
+			var ex = ctx.getBean(App.class);
+		});
     }
 }
