@@ -28,6 +28,9 @@ dependencies {
     // https://mvnrepository.com/artifact/org.springframework/spring-context-support
     implementation("org.springframework:spring-context-support:5.3.22")
 
+    // https://mvnrepository.com/artifact/com.sun.mail/javax.mail
+    implementation("com.sun.mail:javax.mail:1.6.2")
+
     implementation("org.springframework.boot:spring-boot-starter-web")
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
